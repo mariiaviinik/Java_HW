@@ -12,12 +12,12 @@ package hw8;
 
 import java.util.Arrays;
 
-public class StringCollection {
+class StringCollection {
     private String[] stringCollection = new String[10];
-    private int collectionLength = 1;
+    private int collectionLength = 0;
 
     public StringCollection(String str) {
-        this.stringCollection[collectionLength - 1] = str;
+        this.stringCollection[collectionLength] = str;
         collectionLength++;
     }
 
@@ -131,5 +131,8 @@ public class StringCollection {
 
         System.out.println(Arrays.toString(stringCollection1.getStringCollection()));
         System.out.println(Arrays.toString(stringCollection2.getStringCollection()));
+
+        System.out.println(stringCollection1.getCollectionLength());
+        System.out.println(stringCollection2.getCollectionLength());
     }
 }
