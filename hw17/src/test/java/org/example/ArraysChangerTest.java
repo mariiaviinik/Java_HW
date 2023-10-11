@@ -52,8 +52,14 @@ class ArraysChangerTest {
 
     @Test
     void has1And4() {
-        boolean result = ac.checkIncluding1And4(new int[]{1, 5, 6, 7, 8, 4, 8, 9, 10});
+        boolean result1 = ac.checkIncluding1And4(new int[]{1, 1, 1, 4, 1, 4, 1, 1, 1});
+        boolean result2 = ac.checkIncluding1And4(new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1});
+        boolean result3 = ac.checkIncluding1And4(new int[]{4, 4, 4, 4, 4, 4, 4, 4, 4});
+        boolean result4 = ac.checkIncluding1And4(new int[]{1, 1, 1, 4, 1, 4, 1, 1, 1});
 
-        assertTrue(result);
+        assertTrue(result1);
+        assertFalse(result2);
+        assertFalse(result3);
+        assertTrue(result4);
     }
 }
