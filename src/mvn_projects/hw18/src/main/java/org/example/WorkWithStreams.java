@@ -17,13 +17,13 @@ public class WorkWithStreams {
         return average;
     }
 
-    static public Map<String, String> elementsToUpperCaseToMap(List<String> strings) {
-        Map<String, String> result = strings
+    static public List<Pair> elementsToUpperCaseToPair(List<String> strings) {
+        List<Pair> pairsList = strings
                 .stream()
-                .map((string) -> string.toUpperCase())
-                .collect(toMap(String::toLowerCase, String::valueOf));
+                .map((string) -> new Pair(string.toLowerCase(), string.toUpperCase()))
+                .toList();
 
-        return result;
+        return pairsList;
     }
 
     static public List<String> findWordsByPredicates(List<String> strings) {
@@ -43,7 +43,7 @@ public class WorkWithStreams {
         System.out.println(calculateAverage(numbers));
 
         List<String> strings = Arrays.asList("one", "two", "three", "FOUR", "FIVE", "SIX", "seven", "eight", "nine");
-        System.out.println(elementsToUpperCaseToMap(strings).toString());
+        System.out.println(elementsToUpperCaseToPair(strings).toString());
 
         System.out.println(findWordsByPredicates(strings).toString());
     }

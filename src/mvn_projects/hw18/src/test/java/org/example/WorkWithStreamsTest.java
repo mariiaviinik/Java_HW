@@ -20,9 +20,9 @@ class WorkWithStreamsTest {
     }
 
     @Test
-    void elementsToUpperCaseToMap() {
-        Map<String, String> result = wws.elementsToUpperCaseToMap(strings);
-        assertTrue(result.equals(Map.of("nine", "NINE", "six", "SIX", "four", "FOUR", "one", "ONE", "seven", "SEVEN", "two", "TWO", "three", "THREE", "five", "FIVE", "eight", "EIGHT")));
+    void elementsToUpperCaseToPair() {
+        List<Pair> result = wws.elementsToUpperCaseToPair(strings);
+        assertTrue(result.toString().equals("[[one, ONE], [two, TWO], [three, THREE], [four, FOUR], [five, FIVE], [six, SIX], [seven, SEVEN], [eight, EIGHT], [nine, NINE]]"));
     }
 
     @Test
