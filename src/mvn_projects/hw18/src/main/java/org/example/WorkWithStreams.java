@@ -2,10 +2,7 @@ package org.example;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 import java.util.function.Predicate;
-
-import static java.util.stream.Collectors.toMap;
 
 public class WorkWithStreams {
     static public int calculateAverage(List<Integer> numbers) {
